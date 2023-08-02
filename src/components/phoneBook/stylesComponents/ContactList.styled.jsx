@@ -10,6 +10,7 @@ export const ContactItems = styled.li`
   align-items: center;
   margin-bottom: 10px;
   justify-content: space-around;
+  border-bottom: 1px dashed rgb(61, 129, 200);
 `;
 
 export const ContactName = styled.span`

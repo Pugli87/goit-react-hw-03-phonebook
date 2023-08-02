@@ -88,6 +88,7 @@ class ContactForm extends Component {
           required
           value={name}
           onChange={this.handleNameChange}
+          placeholder="Enter your name"
         />
         <Text>number</Text>
         <Input
@@ -98,6 +99,7 @@ class ContactForm extends Component {
           required
           value={number}
           onChange={this.handleNumberChange}
+          placeholder="Enter your number"
         />
         <Button type="submit">add contact</Button>
       </Form>

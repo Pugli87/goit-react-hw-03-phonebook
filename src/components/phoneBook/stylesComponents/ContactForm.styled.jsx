@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Form = styled.form`
   width: 300px;
   border: none;
-  padding: 15px;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
@@ -13,7 +12,7 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   margin: 0 auto;
-  width: 230px;
+  width: 250px;
   padding: 6px 0 6px 20px;
   margin-bottom: 30px;
   border-radius: 15px;
