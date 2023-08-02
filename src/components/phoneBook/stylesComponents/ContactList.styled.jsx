@@ -11,13 +11,13 @@ export const ContactItems = styled.li`
   padding: 5px;
   justify-content: space-around;
   border-bottom: 1px dashed rgb(61, 129, 200);
-  &:last-child {
+  /*&:last-child {
     margin-bottom: 20px;
-  }
+  }*/
 `;
 
 export const ContactName = styled.span`
-  width: 220px;
+  width: 200px;
   font-size: 1rem;
 `;
 
@@ -28,11 +28,11 @@ export const ContBotton = styled.div``;
 
 export const Button = styled.button`
   cursor: pointer;
-  padding: 3px 8px;
+  padding: 3px 10px;
   font-size: 1 rem;
   margin-left: 20px;
   border: none;
-  border-radius: 6px;
+  border-radius: 15px;
   text-transform: capitalize;
   background-color: rgb(61, 129, 200);
   box-shadow: 0 1px 6px 0 #20212447;
@@ -50,5 +50,5 @@ export const Button = styled.button`
 `;
 
 export const Ul = styled.ul`
-  width: 300px;
+  width: 280px;
 `;
