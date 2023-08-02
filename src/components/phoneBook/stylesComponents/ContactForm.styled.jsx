@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  width: 300px;
+  width: 280px;
   border: none;
   display: flex;
   margin: 0 auto;
@@ -28,13 +28,11 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 120px;
   margin: 0 auto;
   background-color: transparent;
   border: none;
-  padding: 3px;
-  font-size: 1 rem;
-  border-radius: 6px;
+  padding: 3px 15px;
+  border-radius: 15px;
   text-transform: capitalize;
   background-color: rgb(61, 129, 200);
   box-shadow: 0 0 5px gray;
