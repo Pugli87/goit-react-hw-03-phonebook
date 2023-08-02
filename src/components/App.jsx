@@ -64,21 +64,23 @@ class App extends Component {
     const { contacts, filter } = this.state;
 
     return (
-      <Container>
+      <>
         <Title>phonebook</Title>
-        <ContactForm addContact={this.addContact} contacts={contacts} />
+        <Container>
+          <ContactForm addContact={this.addContact} contacts={contacts} />
 
-        {contacts.length > 0 && (
-          <>
-            <Heading2>find contacts by name</Heading2>
-            <Filter filter={filter} setFilter={this.setFilter} />
-          </>
-        )}
-        <ContactList
-          contacts={this.filteredContacts()}
-          deleteContact={this.deleteContact}
-        />
-      </Container>
+          {contacts.length > 0 && (
+            <>
+              <Heading2>find contacts by name</Heading2>
+              <Filter filter={filter} setFilter={this.setFilter} />
+            </>
+          )}
+          <ContactList
+            contacts={this.filteredContacts()}
+            deleteContact={this.deleteContact}
+          />
+        </Container>
+      </>
     );
   }
 }

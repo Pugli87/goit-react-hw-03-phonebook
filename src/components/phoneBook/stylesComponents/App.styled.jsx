@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 320px;
   padding: 10px;
   display: flex;
-  margin: 100px auto;
+  margin: 0 auto;
   flex-direction: column;
   border-radius: 15px;
   border: 1px solid rgb(61, 129, 200);
@@ -13,8 +13,10 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin: 0 auto;
+  display: flex;
+  margin: 20px auto;
   margin-bottom: 30px;
+  justify-content: center;
   text-transform: capitalize;
 `;
 
