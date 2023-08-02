@@ -6,7 +6,6 @@ import {
   Container,
   Title,
   Heading2,
-  Text,
 } from './phoneBook/stylesComponents/App.styled';
 import PropTypes from 'prop-types';
 
@@ -71,8 +70,7 @@ class App extends Component {
 
         {contacts.length > 0 && (
           <>
-            <Heading2>contacts</Heading2>
-            <Text>find contacts by name</Text>
+            <Heading2>find contacts by name</Heading2>
             <Filter filter={filter} setFilter={this.setFilter} />
           </>
         )}

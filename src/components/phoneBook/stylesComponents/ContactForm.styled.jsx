@@ -52,19 +52,19 @@ export const Button = styled.button`
   }
 `;
 
-export const Text = styled.h3`
-  margin: 0 auto;
-  font-weight: 400;
-  margin-left: 35px;
-  margin-bottom: 10px;
-  text-transform: capitalize;
-`;
-
-export const SubTitle = styled.h2`
+export const SubTitle = styled.h3`
   text-align: center;
   margin-bottom: 40px;
 
   &::first-letter {
     text-transform: uppercase;
   }
+`;
+
+export const Text = styled.h3`
+  margin: 0 auto;
+  font-weight: 400;
+  margin-left: 35px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
 `;

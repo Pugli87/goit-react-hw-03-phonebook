@@ -8,9 +8,12 @@ export const ContInfo = styled.div`
 export const ContactItems = styled.li`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  padding: 5px;
   justify-content: space-around;
   border-bottom: 1px dashed rgb(61, 129, 200);
+  &:last-child {
+    margin-bottom: 20px;
+  }
 `;
 
 export const ContactName = styled.span`

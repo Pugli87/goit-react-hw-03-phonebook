@@ -18,16 +18,9 @@ export const Title = styled.h1`
   text-transform: capitalize;
 `;
 
-export const Heading2 = styled.h2`
+export const Heading2 = styled.h3`
   display: block;
   margin: 20px auto;
-  text-transform: capitalize;
-`;
-
-export const Text = styled.h3`
-  margin: 0 auto;
-  margin-bottom: 20px;
-
   &::first-letter {
     text-transform: uppercase;
   }
