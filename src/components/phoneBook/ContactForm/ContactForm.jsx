@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
-import { Form, Input, Button, Text } from '../styles/ContactForm.styled';
+import {
+  Form,
+  Input,
+  Button,
+  Text,
+  SubTitle,
+} from '../stylesComponents/ContactForm.styled';
 import PropTypes from 'prop-types';
 
 class ContactForm extends Component {
@@ -72,6 +78,7 @@ class ContactForm extends Component {
 
     return (
       <Form onSubmit={this.handleSubmit}>
+        <SubTitle>Form of contacts</SubTitle>
         <Text>name</Text>
         <Input
           type="text"

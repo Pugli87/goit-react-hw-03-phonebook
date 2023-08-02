@@ -7,17 +7,12 @@ import {
   Title,
   Heading2,
   Text,
-} from './phoneBook/styles/App.styled';
+} from './phoneBook/stylesComponents/App.styled';
 import PropTypes from 'prop-types';
 
 class App extends Component {
   state = {
-    contacts: [
-      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
-      { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
-      { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
-      { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
-    ],
+    contacts: [],
     filter: '',
   };
 
@@ -25,6 +20,21 @@ class App extends Component {
     addContact: PropTypes.func,
     deleteContact: PropTypes.func,
   };
+
+  /* Método que se ejecuta después de que el componente ha sido montado */
+  componentDidMount() {
+    const storedContacts = localStorage.getItem('contacts');
+    if (storedContacts) {
+      this.setState({ contacts: JSON.parse(storedContacts) });
+    }
+  }
+
+  /* Método que se ejecuta cada vez que el componente se actualiza */
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
 
   addContact = newContact => {
     this.setState({
@@ -59,9 +69,13 @@ class App extends Component {
         <Title>phonebook</Title>
         <ContactForm addContact={this.addContact} contacts={contacts} />
 
-        <Heading2>contacts</Heading2>
-        <Text>find contacts by name</Text>
-        <Filter filter={filter} setFilter={this.setFilter} />
+        {contacts.length > 0 && (
+          <>
+            <Heading2>contacts</Heading2>
+            <Text>find contacts by name</Text>
+            <Filter filter={filter} setFilter={this.setFilter} />
+          </>
+        )}
         <ContactList
           contacts={this.filteredContacts()}
           deleteContact={this.deleteContact}

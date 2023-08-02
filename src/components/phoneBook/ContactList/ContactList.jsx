@@ -6,8 +6,9 @@ import {
   ContactItems,
   ContactName,
   ContactNumber,
+  ContBotton,
   Button,
-} from '../styles/ContactList.styled';
+} from '../stylesComponents/ContactList.styled';
 
 function ContactItem({ contact, deleteContact }) {
   const handleDelete = () => {
@@ -20,9 +21,9 @@ function ContactItem({ contact, deleteContact }) {
         <ContactName>{contact.name}</ContactName>
         <ContactNumber>{contact.number}</ContactNumber>
       </ContInfo>
-      <div>
+      <ContBotton>
         <Button onClick={handleDelete}>delete</Button>
-      </div>
+      </ContBotton>
     </ContactItems>
   );
 }
